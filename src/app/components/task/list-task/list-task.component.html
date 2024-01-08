@@ -1,1 +1,37 @@
 <p>list-task works!</p>
+<div class = "row">
+    <h2> Task List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> title</th>
+            <th> description </th>
+            <th> startDate</th>
+            <th>endDate</th>
+            <th>createdBy</th>
+            <th>assignedTo</th>
+            <th>taskStatus</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr> -->
+        <tr *ngFor = "let task of tasks" >
+            <td> {{ task.title }} </td>
+            <td> {{ task.description }} </td>
+            <td> {{ task.startDate }} </td>
+            <td> {{ task.endDate }} </td>
+            <td> {{ task.createdBy.username}} </td>
+            <td> {{ task.assignedTo.username}} </td>
+            <td> {{ task.taskStatus }} </td>
+            <td>hello</td>
+            <td>
+                <!-- <button (click) = "updateEmployee(employee.id)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
